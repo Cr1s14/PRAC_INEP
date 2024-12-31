@@ -4,7 +4,7 @@ using namespace std;
 
 void CapaDePresentacio::IniciSessio() {
 	string sobrenomU, contrasenyaU;
-	wcout << "** Inici sessió **" << endl;
+	wcout << "** Inici sessiÃ³ **" << endl;
 	cout << "Sobrenom: ";
 	cin >> sobrenomU;
 	cout << "Contrasenya: ";
@@ -12,7 +12,7 @@ void CapaDePresentacio::IniciSessio() {
 	TxIniciSessio tx(sobrenomU, contrasenyaU);
 	try {
 		tx.executar();
-		wcout << "Sessió iniciada correctament!" << endl;
+		wcout << "SessiÃ³ iniciada correctament!" << endl;
 	}
 	catch (const exception& e) {
 		cout << "Error:" << e.what() << endl;
@@ -22,12 +22,12 @@ void CapaDePresentacio::IniciSessio() {
 
 void CapaDePresentacio::TancaSessio() {
 	char resposta;
-	wcout << "Vols tancar la sessió? (S/N):";
+	wcout << "Vols tancar la sessiÃ³? (S/N):";
 	cin >> resposta;
-	TxTancaSessió tx;
+	TxTancaSessiÃ³ tx;
 	if (resposta == 'S') {
 		tx.executar();
-		wcout << "Sessió tancada correctament" << endl;
+		wcout << "SessiÃ³ tancada correctament" << endl;
 	}	
 }
 
@@ -45,15 +45,15 @@ void CapaDePresentacio::RegistrarUsuari() {
 	cout << "Contrasenya: ";
 	getline(cin, contrasenyaU);
 
-	wcout << "Correu electrònic: ";
+	wcout << "Correu electrÃ²nic: ";
 	getline(cin, correuU);
 
 	cout << "Data naixement (DD/MM/AAAA): ";
 	getline(cin, dataNaixementU);
 
-	wcout << "Modalitats de subscripció disponibles" << endl;
+	wcout << "Modalitats de subscripciÃ³ disponibles" << endl;
 	cout << " > 1. Completa" << endl;
-	wcout << " > 2. Cinèfil" << endl;
+	wcout << " > 2. CinÃ¨fil" << endl;
 	cout << " > 3. Infantil" << endl;
 	cout << "Escull modalitat: ";
 	int opciosubscripcioU;
@@ -95,16 +95,16 @@ void CapaDePresentacio::ConsultaUsuari() {
 		cout << "** Consulta Usuari **"<< endl;
 		cout << "Nom complet: " << infoUsuari.obteNom() << endl;
 		cout << "Sobrenom: " << infoUsuari.obteSobrenom() << endl;
-		wcout << "Correu electrònic: ";
+		wcout << "Correu electrÃ²nic: ";
 		cout << infoUsuari.obteCorreu() << endl;
 		cout << "Data naixement (DD/MM/AAAA): " << infoUsuari.obteDataNaixement() << endl;	
-		wcout << "Modalitat subscripció: ";
+		wcout << "Modalitat subscripciÃ³: ";
 		cout << infoUsuari.obteSubscripcio() << endl;		
 		cout << endl;
 		cout << infoVisualitzacions.first;
-		wcout << " pel·lícules visualitzades" << endl;
+		wcout << " pelÂ·lÃ­cules visualitzades" << endl;
 		cout << infoVisualitzacions.second;
-		wcout << " capítols visualitzats" << endl;
+		wcout << " capÃ­tols visualitzats" << endl;
 	}
 	catch (const exception& e) {
 		cout << "Error:" << e.what() << endl;
@@ -120,10 +120,10 @@ void CapaDePresentacio::ModificaUsuari() {
 		DTOUsuari infoU = ctrl.consultaUsuari();
 		cout << "Nom complet: " << infoU.obteNom() << endl;
 		cout << "Sobrenom: " << infoU.obteSobrenom() << endl;
-		wcout << "Correu electrònic: ";
+		wcout << "Correu electrÃ²nic: ";
 		cout << infoU.obteCorreu() << endl;
 		cout << "Data naixement (DD/MM/AAAA): " << infoU.obteDataNaixement() << endl;
-		wcout << "Modalitat subscripció: ";
+		wcout << "Modalitat subscripciÃ³: ";
 		cout << infoU.obteSubscripcio() << endl;
 
 		nomU = infoU.obteNom();
@@ -133,7 +133,7 @@ void CapaDePresentacio::ModificaUsuari() {
 
 		cout << endl;
 
-		wcout << "Omplir la informació que es vol modificar ..." << endl;
+		wcout << "Omplir la informaciÃ³ que es vol modificar ..." << endl;
 
 		cout << "Nom complet: ";
 		cin.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -148,7 +148,7 @@ void CapaDePresentacio::ModificaUsuari() {
 			contraU = camp;
 		}
 
-		wcout << "Correu electrònic: ";
+		wcout << "Correu electrÃ²nic: ";
 		getline(cin, camp);
 		if (!camp.empty()) {
 			correuU = camp;
@@ -160,7 +160,7 @@ void CapaDePresentacio::ModificaUsuari() {
 			neixU = camp;
 		}	
 
-		wcout << "Modalitat subscripció: ";
+		wcout << "Modalitat subscripciÃ³: ";
 		getline(cin, camp);	
 		if (!camp.empty()) {
 			modalitatU = camp;
@@ -173,10 +173,10 @@ void CapaDePresentacio::ModificaUsuari() {
 		cout << "** Dades usuari modificades **" << endl;
 		cout << "Nom complet: " << infoU.obteNom() << endl;
 		cout << "Sobrenom: " << infoU.obteSobrenom() << endl;
-		wcout << "Correu electrònic: ";
+		wcout << "Correu electrÃ²nic: ";
 		cout << infoU.obteCorreu() << endl;
 		cout << "Data naixement (DD/MM/AAAA): " << infoU.obteDataNaixement() << endl;
-		wcout << "Modalitat subscripció: ";
+		wcout << "Modalitat subscripciÃ³: ";
 		cout << infoU.obteSubscripcio() << endl;
 	}
 	catch (const exception& e) {
@@ -200,14 +200,14 @@ void CapaDePresentacio::EsborraUsuari() {
 	catch (const exception& e) {
 		cout << "Error:" << e.what() << endl;
 	}
-	// Mostra missatge "La contrasenya no és correcta. l'usuari no s'esborrat"
-	// sinó, mostra missatge "Usuari no s'esborrat correctament"
+	// Mostra missatge "La contrasenya no Ã©s correcta. l'usuari no s'esborrat"
+	// sinÃ³, mostra missatge "Usuari no s'esborrat correctament"
 }
 
 
 void CapaDePresentacio::VisualitzaPeli() {
-	wcout << "** Visualitzar Pel·lícula **"<< endl;
-	wcout << "Nom pel·lícula: ";
+	wcout << "** Visualitzar PelÂ·lÃ­cula **"<< endl;
+	wcout << "Nom pelÂ·lÃ­cula: ";
 	string peli;
 	cin.ignore(numeric_limits<streamsize>::max(), '\n');
 	getline(cin, peli);
@@ -241,7 +241,7 @@ void CapaDePresentacio::VisualitzaSerie() {
 void CapaDePresentacio::ConsultaVisualitzacions() {
 	cout << "** Consulta visualitzacions **" << endl;
 	cout << endl;
-	wcout << "** Visualitzacions pel·lícules **" << endl;
+	wcout << "** Visualitzacions pelÂ·lÃ­cules **" << endl;
 	cout << "*********************************" << endl;
 	TxConsultaVisualitzacions tx; 
 	try {
@@ -254,7 +254,7 @@ void CapaDePresentacio::ConsultaVisualitzacions() {
 
 			<< "nombre de visualitzacions: " << p.obteNumVisualitzacions() << endl;
 		cout << endl;
-		wcout << "** Visualitzacions Sèries **" << endl;
+		wcout << "** Visualitzacions SÃ¨ries **" << endl;
 		cout << "*********************************" << endl;
 		cout << s.obteData() << ": " << s.obteTitolSerie() << "; " << c2.obteQualificacio() << "; Temporada " << s.obteNumTemporada() << "; Capitol " << s.obteNumCapitol() << "; "
 			<< "nombre de visualitzacions: " << s.obteNumVisualitzacions() << endl;
@@ -289,8 +289,9 @@ void CapaDePresentacio::UltimesNovetats() {
 }
 
 void CapaDePresentacio::PelisMesVistes() {
-	wcout << "** Pel·lícules més visualitzades **" << endl;
+	wcout << "** PelÂ·lÃ­cules mÃ©s visualitzades **" << endl;
 	CtrlConsultarPelisMesVistes ctrl;
+	Sistema& sys = Sistema::getInstance();
 	bool acaba = false;
 	try {
 		ctrl.executar();
@@ -301,16 +302,21 @@ void CapaDePresentacio::PelisMesVistes() {
 				acaba = true;
 			}
 			else {
-				cout << pos + 1 << ".- " << p.obteTitol() << "; " << p.obtequalificacio() << "; " << p.obteDuracio() << " min.; " << "Visualitzacions: " <<
-					p.obteNumVisualitzacions() << "  [" << "VISTA: " << p.obteVista() << "]" << endl;
-				++pos;
+				if (sys.essessioiniciada()) {
+					cout << pos + 1 << ".- " << p.obteTitol() << "; " << p.obtequalificacio() << "; " << p.obteDuracio() << " min.; " << "Visualitzacions: " <<
+						p.obteNumVisualitzacions() << "  [" << "VISTA: " << p.obteVista() << "]" << endl;
+					++pos;
+				}
+				else if(!sys.essessioiniciada()) {
+					cout << pos + 1 << ".- " << p.obteTitol() << "; " << p.obtequalificacio() << "; " << p.obteDuracio() << " min.; " << "Visualitzacions: " <<
+						p.obteNumVisualitzacions() << endl;
+					++pos;
+				}	
 			}
-
 			if (pos >= 5) {
 				acaba = true;
 			}
 		}
-	
 	}
 	catch (const exception& e) {
 		cout << "Error:" << e.what() << endl;
