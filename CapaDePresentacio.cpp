@@ -24,7 +24,7 @@ void CapaDePresentacio::TancaSessio() {
 	char resposta;
 	wcout << "Vols tancar la sessió? (S/N):";
 	cin >> resposta;
-	TxTancaSessió tx;
+	TxTancaSessio tx;
 	if (resposta == 'S') {
 		tx.executar();
 		wcout << "Sessió tancada correctament" << endl;

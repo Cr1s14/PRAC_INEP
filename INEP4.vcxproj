@@ -151,6 +151,7 @@
     <ClCompile Include="PassarelaVisualitzaPel.cpp" />
     <ClCompile Include="PassarelaVisualitzaSerie.cpp" />
     <ClCompile Include="PetitFlix.cpp" />
+    <ClCompile Include="prueba.cpp" />
     <ClCompile Include="Sistema.cpp" />
     <ClCompile Include="TxConsultaProperesEstrenes.cpp" />
     <ClCompile Include="TxConsultaUltimesNovetats.cpp" />
@@ -184,6 +185,7 @@
     <ClInclude Include="PassarelaVisualitzaPel.h" />
     <ClInclude Include="PassarelaVisualitzaSerie.h" />
     <ClInclude Include="PetitFlix.h" />
+    <ClInclude Include="prueba.h" />
     <ClInclude Include="Sistema.h" />
     <ClInclude Include="TxConsultaProperesEstrenes.h" />
     <ClInclude Include="TxConsultaUltimesNovetats.h" />

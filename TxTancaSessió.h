@@ -2,9 +2,9 @@
 #include <iostream>	
 #include "PetitFlix.h"
 #include "Sistema.h"
-class TxTancaSessió {
+class TxTancaSessio {
 public:
-	TxTancaSessió() {
+	TxTancaSessio() {
 	
 	}
 

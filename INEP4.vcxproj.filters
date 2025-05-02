@@ -114,6 +114,9 @@
     <ClCompile Include="ConnexioBD.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+    <ClCompile Include="prueba.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ConnexioBD2.h">
@@ -207,6 +210,9 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="ConnexioBD.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="prueba.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
