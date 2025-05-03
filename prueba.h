@@ -2,8 +2,18 @@
 #include <iostream>
 using namespace std;
 class prueba {
+private:
+	string t;
+public:
+	prueba() {
+	}
+
+	prueba(string l) {
+		t = l;
+	}
+
 	void executar() {
-		string t;
+		cout << t;
 	}
 };
 

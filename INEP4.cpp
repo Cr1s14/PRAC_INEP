@@ -9,6 +9,7 @@
 #include "ConnexioBD2.h"
 #include "CapaDePresentacio.h"
 #include "PassarelaUsuari.h"
+#include "prueba.h"
 #include <locale>
 
 using namespace std;
@@ -168,6 +169,9 @@ int main() {
 
     do {
         if (not sys.essessioiniciada()) {
+            string l = "hola";
+            prueba s = prueba(l);
+            s.executar();
             mostrarMenuPrincipal();
             cin >> opcio1;
             cout << endl;
